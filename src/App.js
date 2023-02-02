@@ -28,7 +28,9 @@ function App() {
     setTodoList(
       todoList.map((task) => {
         if (task.id === id) {
-          return { ...task, completed: true }
+          return task.completed
+            ? { ...task, completed: false }
+            : { ...task, completed: true }
         } else {
           return task
         }
