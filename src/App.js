@@ -47,7 +47,7 @@ function App() {
       <div className='list'>
         {todoList.map((task) => {
           return (
-            <Task
+            <Task key={task.id}
               taskName={task.taskName}
               id={task.id}
               completed={task.completed}
